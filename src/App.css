@@ -4,12 +4,23 @@
   padding: 2rem;
   text-align: center;
 } */
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+* {
+  box-sizing: border-box;
+}
 
+.main{
+  padding: 100px 800px;
+}
 
 .form {
   display: grid;
-  grid-template: 40px 40px 1fr/ 1fr 1fr;
+  grid-template: 40px 40px / 1fr 1fr;
   gap: 17px;
+  margin-bottom: 17px;
 }
 
 .input {
@@ -28,16 +39,45 @@
   border: none;
   cursor: pointer;}
 
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.meme{
+  position: relative;
 }
 
 .image{
+  width: 100%;
   max-width: 100%;
-  grid-column: 1/-1;
-  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.text{
+  position: absolute;
+  width: 30%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 4em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
 }
