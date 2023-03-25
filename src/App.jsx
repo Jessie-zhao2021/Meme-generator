@@ -11,9 +11,17 @@ const[memesData, setMemesData]=useState([])
 
 useEffect(()=>{
    fetch("https://api.imgflip.com/get_memes")
-   .then(res=>res.json())
-   .then(data=>setMemesData(data.data.memes))
+     .then(res=>res.json())
+     .then(data=>setMemesData(data.data.memes))
 },[])
+// useEffect(() => {
+//   async function getMemes() {
+//       const res = await fetch("https://api.imgflip.com/get_memes")
+//       const data = await res.json()
+//       setMemeData(data.data.memes)
+//   }
+//   getMemes()
+// }, [])
 
   const randomNumber = Math.floor(Math.random()*memesData.length)
 
