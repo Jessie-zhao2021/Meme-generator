@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Header from './Header.jsx'
 import './App.css'
 
 function App() {
@@ -42,6 +43,7 @@ useEffect(()=>{
   }
   return (
     <div className='main'>
+      <Header />
       <div className='form'>
         <input className="input" type="text" placeholder='TopText'
                value={meme.topText} name="topText" onChange={handleChange}
